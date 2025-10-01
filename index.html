@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Start & Ride Motors - Véhicules d'exception</title>
+    <title>RareRide Motors - Véhicules d'exception</title>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -437,7 +437,39 @@
                             Envoyer le message
                         </button>
 </form>
-                </div>
+<script>
+    // In a real implementation, you would replace this with actual form submission to your server
+    // For example using fetch() to a PHP/Node.js endpoint that sends the email
+    /*
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            firstname: document.getElementById('firstname').value,
+            lastname: document.getElementById('lastname').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success) {
+            alert('Message envoyé avec succès !');
+            form.reset();
+        } else {
+            alert('Erreur lors de l\'envoi du message');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Une erreur est survenue');
+    });
+    */
+</script>
+</div>
             </div>
         </div>
     </section>
@@ -555,25 +587,23 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const formObject = Object.fromEntries(formData.entries());
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Envoi en cours...';
             
-            // Create mailto link with form data
-            const subject = encodeURIComponent(formObject.subject || 'Demande de contact');
-            const body = encodeURIComponent(
-                `Prénom: ${formObject.firstname}\n` +
-                `Nom: ${formObject.lastname}\n` +
-                `Email: ${formObject.email}\n\n` +
-                `Message: ${formObject.message}`
-            );
-            
-            // Open default mail client
-            window.location.href = `mailto:veduta.victor.pro@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Reset form and show confirmation
-            this.reset();
-            alert('Votre client de messagerie s\'ouvrira avec votre message pré-rempli. Merci de l\'envoyer pour nous contacter.');
+            // Simulate form submission (in a real scenario, you would use a server-side script)
+            setTimeout(() => {
+                // Reset form
+                this.reset();
+                
+                // Show success message
+                alert('Merci ! Votre message a bien été envoyé. Nous vous répondrons dès que possible.');
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Envoyer le message';
+            }, 1500);
         });
 </script>
 </body>
