@@ -219,10 +219,6 @@
                         throw new Error('Erreur réseau');
                     }
                 })
-                .catch(error => {
-                    alert("Une erreur est survenue. Veuillez réessayer.");
-                    console.error('Error:', error);
-                })
                 .finally(() => {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = 'Envoyer la demande';
