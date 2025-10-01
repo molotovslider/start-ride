@@ -417,8 +417,8 @@
                         </div>
                         <div class="mb-6">
                             <label for="email" class="block text-gray-300 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                        </div>
+                            <input type="email" id="email" name="Email" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+</div>
                         <div class="mb-6">
                             <label for="subject" class="block text-gray-300 mb-2">Sujet</label>
                             <select id="subject" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
@@ -439,8 +439,9 @@
                             Envoyer le message
                         </button>
                         <input type="hidden" name="_subject" value="Nouveau message de Start & Ride">
-                        <input type="hidden" name="_template" value="box">
-                        <input type="hidden" name="_next" value="https://votre-site.com/merci.html">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="merci.html">
+                        <input type="hidden" name="_replyto" id="replyToContact">
                         <input type="hidden" name="_autoresponse" value="Merci pour votre message. Nous vous contacterons sous peu.">
 </form>
 <script>
