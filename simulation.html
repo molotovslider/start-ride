@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulation de Financement - Start & Ride</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -52,9 +52,129 @@
 
             <!-- Iframe pour la simulation -->
             <div class="bg-gray-100 rounded-xl shadow-lg p-6">
-                <iframe src="https://www.sikomobility.com/simulation" 
-                        class="w-full h-screen min-h-[600px] border-0 rounded-lg"></iframe>
-            </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Simulation de financement</h2>
+                    <p class="mb-4">Pour une simulation personnalisée, veuillez remplir ce formulaire :</p>
+                    <form id="simulationForm" action="https://formsubmit.co/veduta.victor.pro@gmail.com" method="POST" class="space-y-4">
+                        <input type="hidden" name="_subject" value="Nouvelle demande de simulation Start & Ride">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_next" value="merci.html">
+                        <input type="hidden" name="_replyto" id="replyTo">
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="Montant" id="montantValue">
+                        <input type="hidden" name="Durée" id="dureeValue">
+                        <input type="hidden" name="Nom complet" id="nomValueSimu">
+                        <input type="hidden" name="Téléphone" id="telValue">
+                        <input type="hidden" name="_autoresponse" value="Merci pour votre demande de simulation. Nous vous contacterons sous peu.">
+<div>
+                            <label for="montant" class="block mb-1">Montant à financer (€)</label>
+                            <input type="number" id="montant" name="Montant" required class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        
+                        <div>
+                            <label for="duree" class="block mb-1">Durée (mois)</label>
+                            <select id="duree" name="Durée (mois)" required class="w-full px-4 py-2 border rounded-lg">
+<option value="12">12 mois</option>
+                                <option value="24">24 mois</option>
+                                <option value="36">36 mois</option>
+                                <option value="48">48 mois</option>
+                                <option value="60">60 mois</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="nom" class="block mb-1">Nom complet</label>
+                            <input type="text" id="nom" name="Nom complet" required class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" name="Email" required class="w-full px-4 py-2 border rounded-lg">
+                        </div>
+                        
+                        <div>
+                            <label for="telephone" class="block mb-1">Téléphone</label>
+                            <input type="tel" id="telephone" name="Téléphone" required class="w-full px-4 py-2 border rounded-lg">
+</div>
+                        <button type="submit" class="w-full bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-600 transition">
+                            Envoyer la demande
+                        </button>
+                    </form>
+                    <script>
+                    document.getElementById('simulationForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const form = this;
+                        const submitBtn = form.querySelector('button[type="submit"]');
+                        
+                        // Set hidden values before submission
+                        document.getElementById('montantValue').value = document.getElementById('montant').value;
+                        document.getElementById('dureeValue').value = document.getElementById('duree').value;
+                        document.getElementById('nomValueSimu').value = document.getElementById('nom').value;
+                        document.getElementById('telValue').value = document.getElementById('telephone').value;
+                        document.getElementById('replyTo').value = document.getElementById('email').value;
+
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = 'Envoi en cours...';
+
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                window.location.href = 'merci.html';
+                            } else {
+                                throw new Error('Erreur réseau');
+                            }
+                        })
+                        .catch(error => {
+                            alert("Une erreur est survenue. Veuillez réessayer.");
+                            console.error('Error:', error);
+                        })
+                        .finally(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = 'Envoyer la demande';
+                        });
+                    });
+</script>
+</div>
+
+                <script>
+                    document.getElementById('simulationForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const form = this;
+                        const submitBtn = form.querySelector('button[type="submit"]');
+                        
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = 'Envoi en cours...';
+
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                window.location.href = 'merci.html';
+                            } else {
+                                throw new Error('Erreur réseau');
+                            }
+                        })
+                        .catch(error => {
+                            alert("Une erreur est survenue. Veuillez réessayer.");
+                            console.error('Error:', error);
+                        })
+                        .finally(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = 'Envoyer la demande';
+                        });
+                    });
+                </script>
+</div>
 
             <div class="mt-8 text-center">
                 <a href="services.html" class="inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
