@@ -439,9 +439,14 @@
                             Envoyer le message
                         </button>
                         <input type="hidden" name="_subject" value="Nouveau message de Start & Ride">
-                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_template" value="box">
                         <input type="hidden" name="_next" value="merci.html">
                         <input type="hidden" name="_replyto" id="replyToContact">
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="Prénom" id="prenomValue">
+                        <input type="hidden" name="Nom" id="nomValue">
+                        <input type="hidden" name="Sujet" id="sujetValue">
+                        <input type="hidden" name="Message" id="messageValue">
                         <input type="hidden" name="_autoresponse" value="Merci pour votre message. Nous vous contacterons sous peu.">
 </form>
 <script>
@@ -596,6 +601,13 @@
             const form = this;
             const submitBtn = form.querySelector('button[type="submit"]');
             
+            // Set hidden values before submission
+            document.getElementById('prenomValue').value = document.getElementById('firstname').value;
+            document.getElementById('nomValue').value = document.getElementById('lastname').value;
+            document.getElementById('sujetValue').value = document.getElementById('subject').value;
+            document.getElementById('messageValue').value = document.getElementById('message').value;
+            document.getElementById('replyToContact').value = document.getElementById('email').value;
+
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Envoi en cours...';
 
@@ -621,7 +633,7 @@
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = 'Envoyer le message';
             });
-});
+        });
 </script>
 </body>
 </html>
