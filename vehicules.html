@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre collection - Start & Ride</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i data-feather="zap" class="text-yellow-400"></i>
+                    <span class="text-xl font-bold">Start & Ride</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
+                    <a href="vehicules.html" class="text-yellow-400">Véhicules</a>
+                    <a href="services.html" class="hover:text-yellow-400 transition">Services</a>
+<a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 hover:text-yellow-400 transition">Accueil</a>
+                <a href="vehicules.html" class="block py-2 text-yellow-400">Véhicules</a>
+                <a href="services.html" class="block py-2 hover:text-yellow-400 transition">Services</a>
+<a href="index.html#contact" class="block py-2 hover:text-yellow-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Vehicles Collection -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Notre collection exclusive</h1>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Découvrez l'intégralité de notre stock de véhicules rares et premium disponibles immédiatement.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mercedes Class G -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.automobile-magazine.fr/asset/cms/19700/config/18199/avec-ce-concept-4x4-puissance-2-le-classe-g-devient-encore-plus-spectaculaire-et-doue-hors-du-goudron.jpg" alt="Mercedes Class G" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Mercedes-Benz Class G 4x4</h3>
+                            <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">G²</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Légendaire 4x4 de luxe allemand, symbole de robustesse et d'exclusivité.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€380,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Porsche 911 GT3 RS -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://cdn.abcmoteur.fr/wp-content/uploads/2022/08/img-scaled.jpg" alt="Porsche 911 GT3 RS" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Porsche 911 GT3 RS</h3>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">GT3 RS</span>
+                        </div>
+                        <p class="text-gray-600 my-4">La quintessence de la performance sur circuit, disponible immédiatement.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€380,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kia EV6 GT -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/ev6/ev6-pe-gt-my25/discover/kia-ev6-pe-gt-my25-highlights-driving.jpg" alt="Kia EV6 GT" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Kia EV6 GT</h3>
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Location</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Électrique performante avec 585 chevaux, disponible à la location.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€120/jour</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Réserver
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ferrari 488 Pista -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/1" alt="Ferrari 488 Pista" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Ferrari 488 Pista</h3>
+                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Sport</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Supercar italienne avec 720 chevaux et technologie de F1.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€420,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Range Rover SVAutobiography -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/2" alt="Range Rover SVAutobiography" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Range Rover SVAutobiography</h3>
+                            <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">Luxe</span>
+                        </div>
+                        <p class="text-gray-600 my-4">SUV de luxe ultime avec intérieur sur mesure.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€280,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BMW M8 Competition -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/3" alt="BMW M8 Competition" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">BMW M8 Competition</h3>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">GT</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Grand tourisme allemand avec 625 chevaux.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€180,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audi RS6 Avant -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/4" alt="Audi RS6 Avant" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Audi RS6 Avant</h3>
+                            <span class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-bold">Familiale</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Break sportif avec 600 chevaux et espace familial.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€150,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lamborghini Huracan EVO -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/5" alt="Lamborghini Huracan EVO" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Lamborghini Huracan EVO</h3>
+                            <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">Supercar</span>
+                        </div>
+                        <p class="text-gray-600 my-4">V10 naturel de 640 chevaux, design agressif.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€350,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mercedes-AMG GT Black Series -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/6" alt="Mercedes-AMG GT Black Series" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Mercedes-AMG GT Black Series</h3>
+                            <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">Track</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Version la plus radicale du coupé AMG avec 730 chevaux.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€450,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tesla Model S Plaid -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/7" alt="Tesla Model S Plaid" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Tesla Model S Plaid</h3>
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Électrique</span>
+                        </div>
+                        <p class="text-gray-600 my-4">1,020 chevaux, 0-100 km/h en 1,99s.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€140,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rolls-Royce Ghost -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="http://static.photos/automotive/640x360/8" alt="Rolls-Royce Ghost" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Rolls-Royce Ghost</h3>
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">Ultra Luxe</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Silence et raffinement absolus.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">€500,000</span>
+                            <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Contacter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="text-center mt-12">
+                <a href="index.html#contact" class="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-full hover:bg-yellow-600 transition duration-300">
+                    Nous contacter pour plus d'informations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i data-feather="zap" class="text-yellow-500"></i>
+                        <span class="text-white font-bold text-xl">Start & Ride</span>
+                    </div>
+                    <p class="mb-4">
+                        Votre partenaire pour l'acquisition et la gestion de véhicules d'exception.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-yellow-500 transition">Accueil</a></li>
+                        <li><a href="vehicules.html" class="text-yellow-500">Véhicules</a></li>
+                        <li><a href="index.html#services" class="hover:text-yellow-500 transition">Services</a></li>
+                        <li><a href="index.html#contact" class="hover:text-yellow-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            +33 7 50 04 25 55
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            veduta.victor.pro@gmail.com
+</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Newsletter</h4>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="bg-gray-800 px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                        <button type="submit" class="bg-yellow-500 text-black px-4 py-2 rounded-r-lg hover:bg-yellow-600 transition">
+                            <i data-feather="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>© 2025 Start & Ride. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

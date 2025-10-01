@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation de Financement - Start & Ride</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i data-feather="zap" class="text-yellow-400"></i>
+                    <span class="text-xl font-bold">Start & Ride</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
+                    <a href="vehicules.html" class="hover:text-yellow-400 transition">Véhicules</a>
+                    <a href="services.html" class="hover:text-yellow-400 transition">Services</a>
+                    <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 hover:text-yellow-400 transition">Accueil</a>
+                <a href="vehicules.html" class="block py-2 hover:text-yellow-400 transition">Véhicules</a>
+                <a href="services.html" class="block py-2 hover:text-yellow-400 transition">Services</a>
+                <a href="index.html#contact" class="block py-2 hover:text-yellow-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Simulation Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Simulation de Financement</h1>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Remplissez notre formulaire pour obtenir une estimation personnalisée de votre financement.
+                </p>
+            </div>
+
+            <!-- Iframe pour la simulation -->
+            <div class="bg-gray-100 rounded-xl shadow-lg p-6">
+                <iframe src="https://www.sikomobility.com/simulation" 
+                        class="w-full h-screen min-h-[600px] border-0 rounded-lg"></iframe>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="services.html" class="inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                    Retour aux services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i data-feather="zap" class="text-yellow-500"></i>
+                        <span class="text-white font-bold text-xl">Start & Ride</span>
+                    </div>
+                    <p class="mb-4">
+                        Votre partenaire pour l'acquisition et la gestion de véhicules d'exception.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-yellow-500 transition">Accueil</a></li>
+                        <li><a href="vehicules.html" class="hover:text-yellow-500 transition">Véhicules</a></li>
+                        <li><a href="services.html" class="hover:text-yellow-500 transition">Services</a></li>
+                        <li><a href="index.html#contact" class="hover:text-yellow-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            +33 7 50 04 25 55
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            veduta.victor.pro@gmail.com
+</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Newsletter</h4>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="bg-gray-800 px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                        <button type="submit" class="bg-yellow-500 text-black px-4 py-2 rounded-r-lg hover:bg-yellow-600 transition">
+                            <i data-feather="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>© 2025 Start & Ride. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
