@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demande de location - Start & Ride</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <title>Location de véhicules - Start & Ride</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
-<body class="bg-white font-sans">
+<body class="bg-gray-100 font-sans">
 
     <!-- Navigation -->
     <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
@@ -22,30 +21,84 @@
                 <a href="index.html" class="hover:text-yellow-400">Accueil</a>
                 <a href="vehicules.html" class="hover:text-yellow-400">Véhicules</a>
                 <a href="services.html" class="hover:text-yellow-400">Services</a>
-                <a href="location.html" class="hover:text-yellow-400">Location</a>
+                <a href="location.html" class="text-yellow-400">Location</a>
                 <a href="index.html#contact" class="hover:text-yellow-400">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Formulaire -->
-    <section class="py-20">
-        <div class="container mx-auto px-6 max-w-xl bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-            <h1 class="text-3xl font-bold mb-6 text-center">Demande de location</h1>
-            <p class="text-center text-gray-600 mb-4">Vous souhaitez louer : <span id="vehicule-name" class="font-bold text-yellow-500"></span></p>
+    <!-- Section Location -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Nos véhicules en location</h1>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Choisissez parmi notre sélection de véhicules premium pour vos déplacements.
+                </p>
+            </div>
 
-            <form action="send-mail.php" method="POST" class="space-y-4">
-                <input type="hidden" name="model" id="hidden-model">
+            <!-- Grille des véhicules -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <input type="text" name="nom" placeholder="Votre nom" class="w-full border rounded-lg px-4 py-2" required>
-                <input type="email" name="email" placeholder="Votre email" class="w-full border rounded-lg px-4 py-2" required>
-                <input type="tel" name="telephone" placeholder="Votre téléphone" class="w-full border rounded-lg px-4 py-2">
-                <textarea name="message" placeholder="Votre message" class="w-full border rounded-lg px-4 py-2 h-32"></textarea>
+                <!-- Fiat 500 Abarth -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/62934/w/1200.jpg" alt="Fiat 500 Abarth" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fiat 500 Abarth</h3>
+                        <p class="text-gray-600 mb-4">Citadine sportive, idéale pour la ville.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between"><span>Journée</span><span class="font-bold">€80</span></div>
+                            <div class="flex justify-between"><span>Week-end</span><span class="font-bold">€200</span></div>
+                            <div class="flex justify-between"><span>Semaine</span><span class="font-bold">€450</span></div>
+                        </div>
+                        <a href="contact-vehicule.html?model=Fiat%20500%20Abarth" class="block text-center bg-yellow-500 text-black font-bold py-2 rounded-lg hover:bg-yellow-600 transition">Réserver</a>
+                    </div>
+                </div>
 
-                <button type="submit" class="w-full bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-600 transition">
-                    Envoyer la demande
-                </button>
-            </form>
+                <!-- Mercedes Classe V -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.automobile-magazine.fr/asset/cms/349143/config/115685692/mercedes-classe-v-2024-2.jpg" alt="Mercedes Classe V" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mercedes-Benz Classe V</h3>
+                        <p class="text-gray-600 mb-4">Minivan premium, parfait pour les groupes.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between"><span>Sans chauffeur</span><span class="font-bold">€250/jour</span></div>
+                            <div class="flex justify-between"><span>Avec chauffeur</span><span class="font-bold">€400/jour</span></div>
+                        </div>
+                        <a href="contact-vehicule.html?model=Mercedes-Benz%20Classe%20V" class="block text-center bg-yellow-500 text-black font-bold py-2 rounded-lg hover:bg-yellow-600 transition">Réserver</a>
+                    </div>
+                </div>
+
+                <!-- Mercedes Classe G -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.automobile-magazine.fr/asset/cms/19700/config/18199/avec-ce-concept-4x4-puissance-2-le-classe-g-devient-encore-plus-spectaculaire-et-doue-hors-du-goudron.jpg" alt="Mercedes Classe G" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mercedes-Benz Classe G</h3>
+                        <p class="text-gray-600 mb-4">4x4 iconique, luxe et puissance.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between"><span>Journée</span><span class="font-bold">€900</span></div>
+                            <div class="flex justify-between"><span>Week-end</span><span class="font-bold">€2,500</span></div>
+                        </div>
+                        <a href="contact-vehicule.html?model=Mercedes-Benz%20Classe%20G" class="block text-center bg-yellow-500 text-black font-bold py-2 rounded-lg hover:bg-yellow-600 transition">Réserver</a>
+                    </div>
+                </div>
+
+                <!-- Lamborghini Urus S -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2022/urus_s/urus_s_cover.jpg" alt="Lamborghini Urus S" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Lamborghini Urus S</h3>
+                        <p class="text-gray-600 mb-4">SUV supercar, luxe et performance.</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between"><span>Journée</span><span class="font-bold">€1,500</span></div>
+                            <div class="flex justify-between"><span>Week-end</span><span class="font-bold">€4,000</span></div>
+                        </div>
+                        <a href="contact-vehicule.html?model=Lamborghini%20Urus%20S" class="block text-center bg-yellow-500 text-black font-bold py-2 rounded-lg hover:bg-yellow-600 transition">Réserver</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -55,15 +108,6 @@
     </footer>
 
     <script>
-        // Récupère le paramètre "model" dans l'URL
-        const params = new URLSearchParams(window.location.search);
-        const model = params.get('model');
-
-        if (model) {
-            document.getElementById('vehicule-name').textContent = model;
-            document.getElementById('hidden-model').value = model;
-        }
-
         feather.replace();
     </script>
 </body>
