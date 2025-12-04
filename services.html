@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,38 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Services - Start & Ride</title>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body class="bg-gray-100 font-sans">
+
     <!-- Navigation -->
     <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                    <i data-feather="zap" class="text-yellow-400"></i>
-                    <span class="text-xl font-bold">Start & Ride</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#vehicles" class="hover:text-yellow-400 transition">Véhicules</a>
-                    <a href="services.html" class="hover:text-yellow-400 transition">Services</a>
-                    <a href="location.html" class="hover:text-yellow-400 transition">Location</a>
-                    <a href="#about" class="hover:text-yellow-400 transition">À propos</a>
-                    <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="menu-btn" class="focus:outline-none">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i data-feather="zap" class="text-yellow-400"></i>
+                <span class="text-xl font-bold">Start & Ride</span>
             </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="index.html" class="block py-2 hover:text-yellow-400 transition">Accueil</a>
-                <a href="vehicules.html" class="block py-2 hover:text-yellow-400 transition">Véhicules</a>
-                <a href="services.html" class="block py-2 text-yellow-400">Services</a>
-                <a href="index.html#contact" class="block py-2 hover:text-yellow-400 transition">Contact</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
+                <a href="vehicules.html" class="hover:text-yellow-400 transition">Véhicules</a>
+                <a href="services.html" class="text-yellow-400">Services</a>
+                <a href="location.html" class="hover:text-yellow-400 transition">Location</a>
+                <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
             </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 px-6">
+            <a href="index.html" class="block py-2 hover:text-yellow-400 transition">Accueil</a>
+            <a href="vehicules.html" class="block py-2 hover:text-yellow-400 transition">Véhicules</a>
+            <a href="services.html" class="block py-2 text-yellow-400">Services</a>
+            <a href="location.html" class="block py-2 hover:text-yellow-400 transition">Location</a>
+            <a href="index.html#contact" class="block py-2 hover:text-yellow-400 transition">Contact</a>
         </div>
     </nav>
 
@@ -64,7 +65,7 @@
                     <div class="mt-6 text-center">
                         <a href="simulation.html" class="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
                             Simulation
-</a>
+                        </a>
                     </div>
                 </div>
 
@@ -78,7 +79,7 @@
                         Couvertures premium spécialement conçues pour les véhicules haut de gamme.
                     </p>
                     <div class="mt-6 text-center">
-                        <a href="index.html#contact" class="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                        <a href="contact-vehicule.html?service=Assurance" class="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
                             Demander un devis
                         </a>
                     </div>
@@ -94,7 +95,7 @@
                         Gestion administrative complète, y compris pour les véhicules d'importation.
                     </p>
                     <div class="mt-6 text-center">
-                        <a href="index.html#contact" class="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                        <a href="contact-vehicule.html?service=Carte Grise" class="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
                             En savoir plus
                         </a>
                     </div>
@@ -110,7 +111,7 @@
                         Location courte ou longue durée de véhicules haut de gamme pour tous vos besoins.
                     </p>
                     <div class="mt-6 text-center">
-                        <a href="vehicules.html" class="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                        <a href="location.html" class="inline-block bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
                             Voir nos véhicules
                         </a>
                     </div>
@@ -121,66 +122,50 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-6">
-                        <i data-feather="zap" class="text-yellow-500"></i>
-                        <span class="text-white font-bold text-xl">Start & Ride</span>
-                    </div>
-                    <p class="mb-4">
-                        Votre partenaire pour l'acquisition et la gestion de véhicules d'exception.
-                    </p>
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-6">
+                    <i data-feather="zap" class="text-yellow-500"></i>
+                    <span class="text-white font-bold text-xl">Start & Ride</span>
                 </div>
-
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6">Navigation</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="hover:text-yellow-500 transition">Accueil</a></li>
-                        <li><a href="vehicules.html" class="hover:text-yellow-500 transition">Véhicules</a></li>
-                        <li><a href="services.html" class="text-yellow-500">Services</a></li>
-                        <li><a href="index.html#contact" class="hover:text-yellow-500 transition">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
-                            +33 7 50 04 25 55
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
-                            contact@startride.com
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6">Newsletter</h4>
-                    <form class="flex">
-                        <input type="email" placeholder="Votre email" class="bg-gray-800 px-4 py-2 rounded-l-lg focus:outline-none w-full">
-                        <button type="submit" class="bg-yellow-500 text-black px-4 py-2 rounded-r-lg hover:bg-yellow-600 transition">
-                            <i data-feather="send"></i>
-                        </button>
-                    </form>
-                </div>
+                <p>Votre partenaire pour l'acquisition et la gestion de véhicules d'exception.</p>
             </div>
-
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p>© 2025 Start & Ride. Tous droits réservés.</p>
+            <div>
+                <h4 class="text-white font-bold mb-6">Navigation</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="hover:text-yellow-500 transition">Accueil</a></li>
+                    <li><a href="vehicules.html" class="hover:text-yellow-500 transition">Véhicules</a></li>
+                    <li><a href="services.html" class="text-yellow-500">Services</a></li>
+                    <li><a href="location.html" class="hover:text-yellow-500 transition">Location</a></li>
+                    <li><a href="index.html#contact" class="hover:text-yellow-500 transition">Contact</a></li>
+                </ul>
             </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center"><i data-feather="phone" class="w-4 h-4 mr-2"></i>+33 7 50 04 25 55</li>
+                    <li class="flex items-center"><i data-feather="mail" class="w-4 h-4 mr-2"></i>contact@startride.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Newsletter</h4>
+                <form class="flex">
+                    <input type="email" placeholder="Votre email" class="bg-gray-800 px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                    <button type="submit" class="bg-yellow-500 text-black px-4 py-2 rounded-r-lg hover:bg-yellow-600 transition">
+                        <i data-feather="send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p>© 2025 Start & Ride. Tous droits réservés.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-
-        // Initialize feather icons
         feather.replace();
     </script>
 </body>
