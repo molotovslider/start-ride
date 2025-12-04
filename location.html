@@ -18,11 +18,11 @@
                 <span class="text-xl font-bold">Start & Ride</span>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
-                <a href="vehicules.html" class="hover:text-yellow-400 transition">Véhicules</a>
-                <a href="services.html" class="hover:text-yellow-400 transition">Services</a>
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="vehicules.html" class="hover:text-yellow-400">Véhicules</a>
+                <a href="services.html" class="hover:text-yellow-400">Services</a>
                 <a href="location.html" class="text-yellow-400">Location</a>
-                <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+                <a href="index.html#contact" class="hover:text-yellow-400">Contact</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="focus:outline-none">
@@ -30,13 +30,12 @@
                 </button>
             </div>
         </div>
-        <!-- Menu mobile -->
         <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 px-6">
-            <a href="index.html" class="block py-2 hover:text-yellow-400">Accueil</a>
-            <a href="vehicules.html" class="block py-2 hover:text-yellow-400">Véhicules</a>
-            <a href="services.html" class="block py-2 hover:text-yellow-400">Services</a>
+            <a href="index.html" class="block py-2">Accueil</a>
+            <a href="vehicules.html" class="block py-2">Véhicules</a>
+            <a href="services.html" class="block py-2">Services</a>
             <a href="location.html" class="block py-2 text-yellow-400">Location</a>
-            <a href="index.html#contact" class="block py-2 hover:text-yellow-400">Contact</a>
+            <a href="index.html#contact" class="block py-2">Contact</a>
         </div>
     </nav>
 
@@ -53,7 +52,7 @@
 
             <!-- Grille des véhicules -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Exemple 1 -->
+                <!-- Mercedes Classe V -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
                     <img src="https://www.automobile-magazine.fr/asset/cms/349143/config/115685692/mercedes-classe-v-2024-2.jpg" alt="Mercedes Classe V" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -75,13 +74,13 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                        <a href="https://startandride.com/contact-vehicule.html?model=Mercedes-Benz%20Classe%20V" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
                             Réserver
                         </a>
                     </div>
                 </div>
 
-                <!-- Exemple 2 -->
+                <!-- Porsche 911 GT3 RS -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
                     <img src="https://cdn.abcmoteur.fr/wp-content/uploads/2022/08/img-scaled.jpg" alt="Porsche 911 GT3 RS" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -103,13 +102,13 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                        <a href="https://startandride.com/contact-vehicule.html?model=Porsche%20911%20GT3%20RS" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
                             Réserver
                         </a>
                     </div>
                 </div>
 
-                <!-- Exemple 3 -->
+                <!-- Kia EV6 GT -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
                     <img src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/ev6/ev6-pe-gt-my25/discover/kia-ev6-pe-gt-my25-highlights-driving.jpg" alt="Kia EV6 GT" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -131,18 +130,11 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                        <a href="https://startandride.com/contact-vehicule.html?model=Kia%20EV6%20GT" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
                             Réserver
                         </a>
                     </div>
                 </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="text-center mt-12">
-                <a href="index.html#contact" class="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-full hover:bg-yellow-600 transition duration-300">
-                    Nous contacter pour plus d'informations
-                </a>
             </div>
         </div>
     </section>
@@ -191,6 +183,3 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
         feather.replace();
-    </script>
-</body>
-</html>
