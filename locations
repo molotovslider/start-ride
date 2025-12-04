@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location de véhicules - Start & Ride</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i data-feather="zap" class="text-yellow-400"></i>
+                    <span class="text-xl font-bold">Start & Ride</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
+                    <a href="vehicules.html" class="hover:text-yellow-400 transition">Véhicules</a>
+                    <a href="services.html" class="hover:text-yellow-400 transition">Services</a>
+                    <a href="location.html" class="text-yellow-400">Location</a>
+                    <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 hover:text-yellow-400 transition">Accueil</a>
+                <a href="vehicules.html" class="block py-2 hover:text-yellow-400 transition">Véhicules</a>
+                <a href="services.html" class="block py-2 hover:text-yellow-400 transition">Services</a>
+                <a href="location.html" class="block py-2 text-yellow-400">Location</a>
+                <a href="index.html#contact" class="block py-2 hover:text-yellow-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Location -->
+    <section class="py-20 bg-gradient-to-r from-black to-gray-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Location de véhicules premium</h1>
+            <div class="w-20 h-1 bg-yellow-500 mx-auto mb-6"></div>
+            <p class="text-xl max-w-3xl mx-auto">
+                Profitez de nos véhicules exceptionnels en location courte ou longue durée, avec ou sans chauffeur
+            </p>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nos véhicules en location</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Sélectionnez votre véhicule et choisissez l'option qui vous convient
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mercedes Class V -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.automobile-magazine.fr/asset/cms/349143/config/115685692/mercedes-classe-v-2024-2.jpg" alt="Mercedes Class V" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Mercedes-Benz Class V</h3>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">VIP</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Minivan de luxe avec intérieur premium, idéal pour les groupes ou familles.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Options de location :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Sans chauffeur</span>
+                                    <span class="font-bold">€250/jour</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Avec chauffeur professionnel</span>
+                                    <span class="font-bold">€400/jour</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Réserver maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fiat 500 Abarth -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://media.cdn-jaguarlandrover.com/api/v2/images/62934/w/1200.jpg" alt="Fiat 500 Abarth" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Fiat 500 Abarth</h3>
+                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Sport</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Petite citadine sportive au son caractéristique, parfaite pour la ville.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Location journée</span>
+                                    <span class="font-bold">€80/jour</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Location weekend (3 jours)</span>
+                                    <span class="font-bold">€200</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Semaine complète</span>
+                                    <span class="font-bold">€450</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Réserver maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Véhicule 3 (à modifier) -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Véhicule à personnaliser" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Véhicule Premium</h3>
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Luxe</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Description du véhicule. Vous pouvez modifier cette description.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Location journée</span>
+                                    <span class="font-bold">€--/jour</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Location longue durée</span>
+                                    <span class="font-bold">€--/mois</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Réserver maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Véhicule 4 (à modifier) -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Véhicule à personnaliser" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Véhicule Sport</h3>
+                            <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">Performance</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Description du véhicule. Vous pouvez modifier cette description.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Location journée</span>
+                                    <span class="font-bold">€--/jour</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Location weekend</span>
+                                    <span class="font-bold">€--</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Réserver maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Véhicule 5 (à modifier) -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Véhicule à personnaliser" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">SUV Premium</h3>
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">SUV</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Description du véhicule. Vous pouvez modifier cette description.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Location journée</span>
+                                    <span class="font-bold">€--/jour</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Avec chauffeur</span>
+                                    <span class="font-bold">€--/jour</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Réserver maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Véhicule 6 (à modifier) -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Véhicule à personnaliser" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Berline Luxe</h3>
+                            <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">Confort</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Description du véhicule. Vous pouvez modifier cette description.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Location journée</span>
+                                    <span class="font-bold">€--/jour</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Semaine</span>
+                                    <span class="font-bold">€--</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                                Réserver maintenant
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conditions -->
+            <div class="mt-16 bg-yellow-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-bold mb-4">Conditions de location</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                        <span>Âge minimum : 25 ans avec permis depuis 3 ans</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                        <span>Caution de €2,000 - €10,000 selon véhicule</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                        <span>Kilométrage illimité (hors option basique)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                        <span>Assurance tous risques incluse</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                        <span>Livraison possible sur Paris et région</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                        <span>Options : Sièges bébé, GPS premium, etc.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i data-feather="zap" class="text-yellow-500"></i>
+                        <span class="text-white font-bold text-xl">Start & Ride</span>
+                    </div>
+                    <p class="mb-4">
+                        Location de véhicules premium et services sur mesure.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-yellow-500 transition">Accueil</a></li>
+                        <li><a href="vehicules.html" class="hover:text-yellow-500 transition">Véhicules</a></li>
+                        <li><a href="services.html" class="hover:text-yellow-500 transition">Services</a></li>
+                        <li><a href="location.html" class="text-yellow-500">Location</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Location</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            +33 7 50 04 25 55
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            location@startandride.com
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+                            7j/7 de 8h à 22h
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Réserver</h4>
+                    <p class="mb-4">
+                        Pour toute réservation ou demande d'information, contactez-nous directement.
+                    </p>
+                    <a href="index.html#contact" class="inline-block bg-yellow-500 text-black font-bold py-2 px-6 rounded-full hover:bg-yellow-600 transition">
+                        Formulaire de contact
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>© 2025 Start & Ride Location. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
