@@ -44,3 +44,29 @@
                 <input type="text" name="Nom" placeholder="Votre nom" class="w-full border rounded-lg px-4 py-2" required>
                 <input type="email" name="Email" placeholder="Votre email" class="w-full border rounded-lg px-4 py-2" required>
                 <input type="tel" name="Téléphone" placeholder="Votre téléphone" class="w-full border rounded-lg px-4 py-2">
+                <textarea name="Message" placeholder="Votre message" class="w-full border rounded-lg px-4 py-2 h-32"></textarea>
+
+                <button type="submit" class="w-full bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-600 transition">
+                    Envoyer la demande
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+        <p>© 2025 Start & Ride. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Récupère le paramètre "model" dans l'URL et l'affiche
+        const params = new URLSearchParams(window.location.search);
+        const model = params.get('model');
+        if (model) {
+            document.getElementById('vehicule-name').textContent = model;
+            document.getElementById('vehicleModel').value = model;
+        }
+        feather.replace();
+    </script>
+</body>
+</html>
