@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demande de location - Start & Ride</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
@@ -19,11 +18,11 @@
                 <span class="text-xl font-bold">Start & Ride</span>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
-                <a href="vehicules.html" class="hover:text-yellow-400 transition">Véhicules</a>
-                <a href="services.html" class="hover:text-yellow-400 transition">Services</a>
-                <a href="location.html" class="hover:text-yellow-400 transition">Location</a>
-                <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="vehicules.html" class="hover:text-yellow-400">Véhicules</a>
+                <a href="services.html" class="hover:text-yellow-400">Services</a>
+                <a href="location.html" class="hover:text-yellow-400">Location</a>
+                <a href="index.html#contact" class="hover:text-yellow-400">Contact</a>
             </div>
         </div>
     </nav>
@@ -34,12 +33,10 @@
             <h1 class="text-3xl font-bold mb-6 text-center">Demande de location</h1>
             <p class="text-center text-gray-600 mb-4">Vous souhaitez louer : <span id="vehicule-name" class="font-bold text-yellow-500"></span></p>
 
-            <!-- FormSubmit -->
-            <form action="https://formsubmit.co/veduta.victor.pro@gmail.com" method="POST" class="space-y-4">
+            <!-- Formspree -->
+            <form action="https://formspree.io/f/xpwvlpov" method="POST" class="space-y-4">
                 <!-- Champs cachés -->
                 <input type="hidden" name="_subject" value="Nouvelle demande de location">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://startandride.com/merci.html">
                 <input type="hidden" name="Véhicule" id="vehicleModel">
 
                 <!-- Champs visibles -->
@@ -47,29 +44,3 @@
                 <input type="text" name="Nom" placeholder="Votre nom" class="w-full border rounded-lg px-4 py-2" required>
                 <input type="email" name="Email" placeholder="Votre email" class="w-full border rounded-lg px-4 py-2" required>
                 <input type="tel" name="Téléphone" placeholder="Votre téléphone" class="w-full border rounded-lg px-4 py-2">
-                <textarea name="Message" placeholder="Votre message" class="w-full border rounded-lg px-4 py-2 h-32"></textarea>
-
-                <button type="submit" class="w-full bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-600 transition">
-                    Envoyer la demande
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <p>© 2025 Start & Ride. Tous droits réservés.</p>
-    </footer>
-
-    <script>
-        // Récupère le paramètre "model" dans l'URL et l'affiche
-        const params = new URLSearchParams(window.location.search);
-        const model = params.get('model');
-        if (model) {
-            document.getElementById('vehicule-name').textContent = model;
-            document.getElementById('vehicleModel').value = model;
-        }
-        feather.replace();
-    </script>
-</body>
-</html>
