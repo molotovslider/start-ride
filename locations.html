@@ -1,34 +1,195 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merci - Start & Ride</title>
+    <title>Location de véhicules - Start & Ride</title>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body class="bg-gray-100 font-sans">
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="bg-white p-12 rounded-xl shadow-lg text-center max-w-2xl mx-4">
-            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <i data-feather="check" class="w-10 h-10 text-green-500"></i>
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i data-feather="zap" class="text-yellow-400"></i>
+                <span class="text-xl font-bold">Start & Ride</span>
             </div>
-            <h1 class="text-3xl md:text-4xl font-bold mb-4">Merci pour votre message !</h1>
-            <p class="text-gray-600 mb-8">
-                Nous avons bien reçu votre demande et nous vous répondrons dans les plus brefs délais.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="index.html" class="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-600 transition duration-300">
-                    Retour à l'accueil
-                </a>
-                <a href="vehicules.html" class="inline-block border-2 border-black text-black font-bold py-3 px-8 rounded-lg hover:bg-black hover:text-white transition duration-300">
-                    Voir nos véhicules
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
+                <a href="vehicules.html" class="hover:text-yellow-400 transition">Véhicules</a>
+                <a href="services.html" class="hover:text-yellow-400 transition">Services</a>
+                <a href="location.html" class="text-yellow-400">Location</a>
+                <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 px-6">
+            <a href="index.html" class="block py-2 hover:text-yellow-400">Accueil</a>
+            <a href="vehicules.html" class="block py-2 hover:text-yellow-400">Véhicules</a>
+            <a href="services.html" class="block py-2 hover:text-yellow-400">Services</a>
+            <a href="location.html" class="block py-2 text-yellow-400">Location</a>
+            <a href="index.html#contact" class="block py-2 hover:text-yellow-400">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Section Location -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Nos véhicules en location</h1>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Choisissez parmi notre sélection de véhicules premium pour vos déplacements.
+                </p>
+            </div>
+
+            <!-- Grille des véhicules -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Exemple 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.automobile-magazine.fr/asset/cms/349143/config/115685692/mercedes-classe-v-2024-2.jpg" alt="Mercedes Classe V" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Mercedes-Benz Classe V</h3>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">VIP</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Minivan de luxe, idéal pour les groupes ou familles.</p>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Sans chauffeur</span>
+                                    <span class="font-bold">€250/jour</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Avec chauffeur</span>
+                                    <span class="font-bold">€400/jour</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                            Réserver
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Exemple 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://cdn.abcmoteur.fr/wp-content/uploads/2022/08/img-scaled.jpg" alt="Porsche 911 GT3 RS" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Porsche 911 GT3 RS</h3>
+                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Sport</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Performance ultime pour un week-end sensationnel.</p>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Journée</span>
+                                    <span class="font-bold">€1,200</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Week-end</span>
+                                    <span class="font-bold">€3,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                            Réserver
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Exemple 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/vehicles/ev6/ev6-pe-gt-my25/discover/kia-ev6-pe-gt-my25-highlights-driving.jpg" alt="Kia EV6 GT" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Kia EV6 GT</h3>
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Électrique</span>
+                        </div>
+                        <p class="text-gray-600 my-4">Berline électrique sportive avec autonomie premium.</p>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2">Tarifs :</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Journée</span>
+                                    <span class="font-bold">€150</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Semaine</span>
+                                    <span class="font-bold">€900</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition">
+                            Réserver
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12">
+                <a href="index.html#contact" class="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-full hover:bg-yellow-600 transition duration-300">
+                    Nous contacter pour plus d'informations
                 </a>
             </div>
-</div>
-    </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-6">
+                    <i data-feather="zap" class="text-yellow-500"></i>
+                    <span class="text-white font-bold text-xl">Start & Ride</span>
+                </div>
+                <p>Location de véhicules premium et services sur mesure.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Navigation</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="hover:text-yellow-500">Accueil</a></li>
+                    <li><a href="vehicules.html" class="hover:text-yellow-500">Véhicules</a></li>
+                    <li><a href="services.html" class="hover:text-yellow-500">Services</a></li>
+                    <li><a href="location.html" class="text-yellow-500">Location</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center"><i data-feather="phone" class="w-4 h-4 mr-2"></i>+33 7 50 04 25 55</li>
+                    <li class="flex items-center"><i data-feather="mail" class="w-4 h-4 mr-2"></i>location@startandride.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Réserver</h4>
+                <p>Contactez-nous pour toute réservation.</p>
+                <a href="index.html#contact" class="inline-block bg-yellow-500 text-black font-bold py-2 px-6 rounded-full hover:bg-yellow-600 transition">
+                    Formulaire
+                </a>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p>© 2025 Start & Ride. Tous droits réservés.</p>
+        </div>
+    </footer>
+
     <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
         feather.replace();
     </script>
 </body>
