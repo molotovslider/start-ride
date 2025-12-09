@@ -95,43 +95,44 @@
         </div>
     </nav>
 
-   <!-- Hero Section avec vidéo YouTube en arrière-plan -->
-<section id="home" class="relative h-screen flex items-center justify-center text-white overflow-hidden">
-    <!-- Vidéo YouTube en arrière-plan -->
-    <div class="absolute inset-0 -z-10 overflow-hidden">
-        <div class="relative w-full h-full">
-            <!-- Vidéo principale (centrée et mise à l'échelle) -->
-            <iframe
-                class="absolute top-0 left-0 w-full h-full object-cover scale-125"
-                src="https://www.youtube.com/embed/_wzgish8T8g?autoplay=1&mute=1&loop=1&playlist=_wzgish8T8g&controls=0&modestbranding=1&rel=0&enablejsapi=1&playinline=1&start=21"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
+    <!-- Hero Section avec vidéo YouTube en arrière-plan -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-white overflow-hidden">
+        <!-- Vidéo YouTube en arrière-plan -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <div class="relative w-full h-full">
+                <!-- Vidéo principale (centrée et mise à l'échelle) -->
+                <iframe
+                    class="absolute top-0 left-0 w-full h-full object-cover scale-125"
+                    src="https://www.youtube.com/embed/_wzgish8T8g?autoplay=1&mute=1&loop=1&playlist=_wzgish8T8g&controls=0&modestbranding=1&rel=0&enablejsapi=1&playinline=1&start=21"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
         </div>
-    </div>
-    <!-- Filtre sombre léger pour améliorer la lisibilité -->
-    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-    <!-- Contenu de la hero section -->
-    <div class="container mx-auto px-6 z-10 text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">Découvrez l'exception automobile</h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Véhicules rares, services premium et expertise unique
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-                Contactez-nous
+        <!-- Filtre sombre léger pour améliorer la lisibilité -->
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <!-- Contenu de la hero section -->
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Découvrez l'exception automobile</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Véhicules rares, services premium et expertise unique
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                    Contactez-nous
+                </a>
+            </div>
+        </div>
+        <!-- Flèche vers le bas -->
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#vehicles" class="inline-block animate-bounce">
+                <i data-feather="chevron-down" class="w-10 h-10"></i>
             </a>
         </div>
-    </div>
-    <!-- Flèche vers le bas -->
-    <div class="absolute bottom-10 left-0 right-0 text-center">
-        <a href="#vehicles" class="inline-block animate-bounce">
-            <i data-feather="chevron-down" class="w-10 h-10"></i>
-        </a>
-    </div>
-</section>
- <!-- Vehicles Section -->
+    </section>
+
+    <!-- Vehicles Section -->
     <section id="vehicles" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -219,7 +220,7 @@
                     <p class="text-gray-600">
                         Solutions de financement sur mesure pour l'acquisition de votre véhicule de rêve.
                     </p>
-                    <a href="simulation.html" class="mt-4 inline-block text-yellow-500 font-bold hover:underline">En savoir plus →</a>
+                    <a href="#contact" class="mt-4 inline-block text-yellow-500 font-bold hover:underline">En savoir plus →</a>
                 </div>
                 <!-- Service 2 -->
                 <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
@@ -241,7 +242,7 @@
                     <p class="text-gray-600">
                         Gestion complète de votre carte grise, y compris pour les véhicules d'importation.
                     </p>
-                    <a href="#" class="mt-4 inline-block text-yellow-500 font-bold hover:underline">En savoir plus →</a>
+                    <a href="#contact" class="mt-4 inline-block text-yellow-500 font-bold hover:underline">En savoir plus →</a>
                 </div>
                 <!-- Service 4 -->
                 <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
@@ -594,7 +595,6 @@
         document.getElementById('menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -604,7 +604,6 @@
                 });
             });
         });
-
         // Initialize feather icons
         feather.replace();
     </script>
