@@ -2022,12 +2022,19 @@
     let displayCar=car;        // objet animé (repli = voiture codée)
     if(typeof THREE.GLTFLoader!=='undefined'){
       const loader=new THREE.GLTFLoader();
+      // DRACOLoader n'est attaché que pour décoder SI le fichier est compressé Draco.
+      // S'il ne l'est pas, GLTFLoader l'ignore : aucun risque pour un .glb classique.
       if(typeof THREE.DRACOLoader!=='undefined'){
-        const draco=new THREE.DRACOLoader();
-        draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
-        loader.setDRACOLoader(draco);
+        try{
+          const draco=new THREE.DRACOLoader();
+          draco.setDecoderConfig({type:'js'});  // décodeur JS (pas de WASM externe capricieux)
+          draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+          loader.setDRACOLoader(draco);
+        }catch(e){ console.warn('Draco indisponible, chargement standard:',e); }
       }
+      console.log('Chargement du modèle 3D :',MODEL_URL);
       loader.load(MODEL_URL,gltf=>{
+        console.log('✓ Modèle 3D chargé avec succès');
         const model=gltf.scene;
         model.traverse(o=>{
           if(o.isMesh){
@@ -2056,8 +2063,12 @@
         displayCar=pivot;
         // L'easter egg "appel de phares" n'a pas d'effet sur ce modèle : on le neutralise proprement
         window.flashHead=function(){};
-      },undefined,err=>{
-        console.log('Modèle 3D non chargé, voiture stylisée conservée :',MODEL_URL);
+      },
+      xhr=>{ if(xhr.total) console.log('Chargement 3D : '+Math.round(xhr.loaded/xhr.total*100)+'%'); },
+      err=>{
+        console.error('✗ ÉCHEC du chargement du modèle 3D :',MODEL_URL);
+        console.error('Détail de l\'erreur :',err);
+        console.log('→ La voiture stylisée de secours reste affichée.');
       });
     }
 
