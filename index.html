@@ -1707,7 +1707,7 @@
       'padding:8px 16px;border:1px solid #d2ae7a;border-radius:4px;pointer-events:none;max-width:92vw;text-align:center;line-height:1.5';
     document.body.appendChild(diag);
     const dlog=(m)=>{ diag.textContent='[3D] '+m; console.log('[3D]',m); };
-    setTimeout(()=>{ diag.style.transition='opacity 1.2s'; diag.style.opacity='0'; },10000);
+    setTimeout(()=>{ diag.style.transition='opacity 1.2s'; diag.style.opacity='0'; },3500);
 
     const camera=new THREE.PerspectiveCamera(36,1,0.1,100);
     camera.position.set(6.4,2.4,7.4);
@@ -1899,23 +1899,25 @@
     podium.receiveShadow=true;
     scene.add(podium);
 
-    // Texture du plateau : on essaie "bois.jpg" puis "asphalt.jpg" si présents.
-    function loadPodiumTex(names,i){
-      i=i||0;
-      if(i>=names.length) return;  // aucun fichier : on garde la procédurale
-      new THREE.TextureLoader().load(names[i],tx=>{
-        tx.wrapS=tx.wrapT=THREE.RepeatWrapping;
-        tx.repeat.set(1.6,1.6);
-        if('colorSpace' in tx) tx.colorSpace=THREE.SRGBColorSpace;
-        podium.material.map=tx;
-        podium.material.color.set(0xffffff);   // vraies couleurs de la photo
-        podium.material.metalness=.0;           // le bois n'est pas métallique
-        podium.material.roughness=.4;           // verni : léger reflet
-        podium.material.envMapIntensity=.55;
+    // Texture du plateau : bois PBR (couleur + relief + rugosité) pour un rendu réaliste.
+    (function(){
+      const TL=new THREE.TextureLoader();
+      const setup=(t,srgb)=>{ t.wrapS=t.wrapT=THREE.RepeatWrapping; t.repeat.set(1.6,1.6);
+        if(srgb){ if('colorSpace' in t) t.colorSpace=THREE.SRGBColorSpace; } return t; };
+      TL.load('bois.jpg',col=>{
+        podium.material.map=setup(col,true);
+        podium.material.color.set(0xffffff);
+        podium.material.metalness=.0;
+        podium.material.roughness=.55;
+        podium.material.envMapIntensity=.45;
+        // relief
+        TL.load('bois-normal.jpg',n=>{ podium.material.normalMap=setup(n,false);
+          podium.material.normalScale=new THREE.Vector2(.8,.8); podium.material.needsUpdate=true; },undefined,()=>{});
+        // rugosité variable (rainures plus mates)
+        TL.load('bois-rough.jpg',r=>{ podium.material.roughnessMap=setup(r,false); podium.material.needsUpdate=true; },undefined,()=>{});
         podium.material.needsUpdate=true;
-      },undefined,()=>loadPodiumTex(names,i+1));
-    }
-    loadPodiumTex(['bois.jpg','asphalt.jpg']);
+      },undefined,()=>{ /* pas de bois : on garde la procédurale */ });
+    })();
 
     const halo=new THREE.Mesh(
       new THREE.RingGeometry(3.6,3.74,72),
