@@ -2398,6 +2398,12 @@
                 mats.forEach(m=>{
                   m.envMap=envMap; m.envMapIntensity=.5;
                   m.side=THREE.DoubleSide;   // décor d'intérieur : on voit les murs des 2 côtés
+                  // Atténuer les bandeaux lumineux du plafond (matériaux émissifs)
+                  if(m.emissive){
+                    if(m.emissiveIntensity!==undefined) m.emissiveIntensity*=0.35;
+                    m.emissive.multiplyScalar(0.4);
+                  }
+                  if(m.color){ m.color.multiplyScalar(0.8); }  // assombrit légèrement le béton
                   m.needsUpdate=true;
                 });
               }
@@ -2477,10 +2483,10 @@
     function frame(){
       const t=clock.getElapsedTime();
       if(running&&document.getElementById('page-accueil').classList.contains('current')){
-        displayCar.rotation.y=t*.28;
+        displayCar.rotation.y=t*.14;
         if(displayCar===car) wheels.forEach(w=>w.rotation.y=t*1.1);
-        podium.rotation.y=t*.28;
-        rimBand.rotation.y=t*.28;
+        podium.rotation.y=t*.14;
+        rimBand.rotation.y=t*.14;
         haloOut.material.opacity=.10+Math.sin(t*1.4)*.05;
         halo.material.opacity=.65+Math.sin(t*1.8)*.25;
         backGlow.material.opacity=.12+Math.sin(t*1.1)*.04;
